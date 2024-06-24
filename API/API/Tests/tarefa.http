@@ -1,0 +1,29 @@
+### Listar todas as tarefas
+GET http://localhost:5000/tarefas/listar
+
+### Cadastrar uma nova tarefa
+POST http://localhost:5000/tarefas/cadastrar
+Content-Type: application/json
+
+{
+    "titulo": "Estudar Node.js",
+    "descricao": "Estudar Node.js para desenvolver aplicações web",
+    "categoriaId": "6d091456-5a2f-4b5a-98fc-f1a3b50a627d",
+}
+
+#### alterar tarefa
+PUT http://localhost:5000/tarefas/alterar/9b4ef770-784b-48d9-8f10-450481cad48d
+Content-Type: application/json
+
+{
+    "titulo" : "fazer compras",
+    "descricao" : "mercado",
+    "categoriaId" : "compras",
+    "status" : "Concluido"
+}
+
+#### nao concluidas
+GET: http://localhost:5273/tarefas/naoconcluidas
+
+#### concluidas
+GET: http://localhost:5273/tarefas/concluidas
